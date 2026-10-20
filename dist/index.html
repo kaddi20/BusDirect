@@ -26,7 +26,8 @@
     </div>
   </nav>
 </header>
-<section class="mx-auto max-w-360 rounded-2xl border border-blue-100 bg-white px-8 p-2 shadow-sm">
+
+<section class="mx-4 mt-4 rounded-2xl border border-blue-100 bg-white p-4 shadow-sm">
     <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
         <div>
             <p class="mb-2 text-xs font-semibold tracking-wider text-blue-600"> VOTRE TRAJET</p>
@@ -48,24 +49,22 @@
             </div>
         </div>
 
-    <div class="mb-6 flex items-center justify-end gap-6 pr-10">
+    <div class="flex items-center justify-end gap-6 px-4 py-3">
       <div class="flex items-center gap-2">
         <span class="h-3 w-3 rounded-full bg-green-400"></span>
-        <span class="text-sm font-semibold text-[#0B1F4B]">
-            Disponible : 20
-        </span>
+        <span class="text-sm font-semibold text-[#0B1F4B]">Disponible : 20</span>
       </div>
-    <div class="flex items-center gap-2">
-        <span class="h-3 w-3 rounded-full bg-red-400"></span>
-        <span class="text-sm font-semibold text-[#0B1F4B]">
-            Occupées : 0
-        </span>
-    </div>
+      <div class="flex items-center gap-2">
+      <span class="h-3 w-3 rounded-full bg-red-400"></span>
+      <span class="text-sm font-semibold text-[#0B1F4B]">Occupées : 0</span>
   </div>
+</div>
   </div>
 </section>
 
-<main class="w-full lg:w-[60%] p-4">
+<div class="flex flex-row items-start gap-4 px-4">
+
+ <main class="w-[60%] min-w-0 p-2">
   <div class="border border-gray-200 rounded-xl bg-white p-3 mb-5 shadow-sm">
     <div class="grid grid-cols-2 gap-3">
       <div class="flex items-center gap-3 border-r border-gray-200 pr-3">
@@ -92,8 +91,8 @@
     </div>
   </div>
 
-  <section>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-3">
+  <section class="bg-blue-50 border border-blue-100 rounded-2xl p-4 sm:p-5">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
       <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
         <span class="text-xs text-green-500">01</span>
         <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
@@ -214,10 +213,48 @@
           <ion-icon name="person-outline"></ion-icon>
         </div>
       </div>
-
     </div>
   </section>
 </main>
-
+<section class="w-[40%] shrink-0 mt-4">
+  <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+    <h2 class="mb-1 text-lg font-bold text-[#0B1F4B]">Réserver une place</h2>
+    <form id="reservationForm" class="flex flex-col gap-3">
+      <div>
+        <label for="nom" class="mb-1 block text-sm font-medium text-gray-700">Nom du passager</label>
+        <input type="text" name="nom" placeholder="Ex : Khadija kaddii" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
+      </div>
+      <div>
+        <label for="siege" class="mb-1 block text-sm font-medium text-gray-700">Siège sélectionné</label>
+        <select c id="siege" name="siege" class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
+          <option value="" selected>Choisir un siège</option>
+          <option value="01">Siège 01</option>
+          <option value="02">Siège 02</option>
+          <option value="03">Siège 03</option>
+          <option value="04">Siège 04</option>
+          <option value="05">Siège 05</option>
+          <option value="06">Siège 06</option>
+          <option value="07">Siège 07</option>
+          <option value="08">Siège 08</option>
+          <option value="09">Siège 09</option>
+          <option value="10">Siège 10</option>
+          <option value="11">Siège 11</option>
+          <option value="12">Siège 12</option>
+          <option value="13">Siège 13</option>
+          <option value="14">Siège 14</option>
+          <option value="15">Siège 15</option>
+          <option value="16">Siège 16</option>
+          <option value="17">Siège 17</option>
+          <option value="18">Siège 18</option>
+          <option value="19">Siège 19</option>
+          <option value="20">Siège 20</option>
+        </select>
+      </div>
+      <button type="submit"class="w-full rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700">
+        Confirmer la réservation</button>
+    </form>
+  </div>
+  </div>
+</section>
 </body>
 </html>
