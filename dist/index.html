@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!Doctype html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,254 +11,307 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-
-
-<header class="bg-indigo-950 w-full shadow-md">
-  <nav class="flex items-center justify-between px-8 py-4">
-    <div class="flex items-center gap-2 text-white transition">
-      <ion-icon name="bus-outline" class="text-3xl"></ion-icon>
-      <span class="text-2xl font-bold text-white">BusDirect</span>
-    </div>
-    <div class="flex items-center gap-8">
-      <a href="#reservation" class="text-white font-semibold hover:text-violet-300 transition">Réservation</a>
-      <a href="#trajets" class="flex items-center gap-2 text-white hover:text-violet-300 transition">
-        <ion-icon name="navigate-circle-outline" class="text-2xl"></ion-icon>
-        <span class="text-white font-semibold hover:text-violet-300 transition">Direction</span>
-      </a>
-    </div>
-  </nav>
+<!--header-->
+<header class="w-full bg-slate-950 shodow-md">
+<nav class="flex items-center justify-between px-4 py-4 sm:px-8">
+  <div class="flex items-center gap-2 text-white">
+    <ion-icon name="bus-outline" class="text-3xl"></ion-icon>
+    <span class="text-1xl font-bold sm:text-2xl">BusDirect</span>
+  </div>
+<div class="flex items-center text-white gap-4 sm:gap-8">
+  <a href="#reservation" class="text-sm font-semibold hover:text-slate-500 sm:gap-2 sm:text-base">
+    <span>Reservation</span>
+  </a>
+  <a href="#trajet" class="text-sm font-semibold hover:text-slate-500 sm:gap-2 sm:text-base">
+    <span>Trajets</span>
+  </a>
+</div>
+</nav>
 </header>
+<!--information de trajet -->
+<section id="trajet" class="mx-3 mt-1 rounded-2xl border border-slate-400 p-4 shadow-sm sm:mx-4 sm:p-5">
+  <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
+    <div class="flex flex-col gap-2">
+    <p class="text-xs font-semibold text-slate-500 ">Votre Trejet</p>
 
-<section class="mx-4 mt-4 rounded-2xl border border-blue-100 bg-white p-4 shadow-sm">
-    <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
-        <div>
-            <p class="mb-2 text-xs font-semibold tracking-wider text-blue-600"> VOTRE TRAJET</p>
-            <div class="flex flex-wrap items-center gap-4">
-                <div>
-                    <h2 class="text-1xl font-extrabold text-[#0B1F4B]">Safi</h2>
-                    <p class="text-xs text-slate-500">Départ</p>
-                </div>
-                <div class="flex items-center gap-2 text-blue-600">
-                    <span class="h-px w-3 bg-blue-500"></span>
-                    <ion-icon name="bus-outline" class="text-2xl"></ion-icon>
-                    <span class="h-px w-3 bg-blue-500"></span>
-                    <ion-icon name="arrow-forward-outline" class="text-xl"></ion-icon>
-                </div>
-                <div>
-                    <h2 class="text-1xl font-extrabold text-[#0B1F4B]">Marrakech</h2>
-                    <p class="text-xs text-slate-500">Destination</p>
-                </div>
-            </div>
-        </div>
+    <div class="flex flex-wrap items-center gap-1 sm:gap-2">
+      <h2 class="text-lg font-bold text-slate-800 sm:text-xl">Safi</h2>
+      <div class="flex items-center gap-1 text-slate-700 sm:gap-2">
+        <span class="h-px w-3 bg-slate-800"></span>
+        <ion-icon name="bus-outline" class="text-2xl"></ion-icon>
+        <span class="h-px w-3 bg-slate-800"></span>
+        <ion-icon name="arrow-forward-outline" class="text-1xl"></ion-icon>
+      </div>
 
-    <div class="flex items-center justify-end gap-6 px-4 py-3">
+      <h2 class="text-lg font-bold text-slate-800 sm:text-xl">Marrakech</h2>
+    </div>
+  </div>
+    <div class="flex flex-wrap items-center gap-4 sm:gap-6">
       <div class="flex items-center gap-2">
-        <span class="h-3 w-3 rounded-full bg-green-400"></span>
-        <span class="text-sm font-semibold text-[#0B1F4B]">Disponible</span>
+        <span class="h-3 w-3 rounded-full bg-green-300"></span>
+        <span class="text-sm font-bold text-slate-800 ">Disponible</span>
       </div>
       <div class="flex items-center gap-2">
-      <span class="h-3 w-3 rounded-full bg-red-400"></span>
-      <span class="text-sm font-semibold text-[#0B1F4B]">Occupées</span>
-  </div>
-</div>
+        <span class="h-3 w-3 rounded-full bg-red-300"></span>
+        <span class="text-sm font-bold text-slate-800 ">Occupé</span>
+      </div>
+    </div>
   </div>
 </section>
-
-<div class="flex flex-row items-start gap-4 px-4">
-
- <main class="w-[60%] min-w-0 p-2">
-  <div class="border border-gray-200 rounded-xl bg-white p-3 mb-5 shadow-sm">
-    <div class="grid grid-cols-2 gap-3">
-      <div class="flex items-center gap-3 border-r border-gray-200 pr-3">
-        <div class="w-9 h-9 shrink-0 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-xl">
-          <ion-icon name="ticket-outline"></ion-icon>
-        </div>
-        <div>
-          <p class="text-xs text-gray-500">Tickets disponibles</p>
-          <p class="text-lg font-bold text-gray-800">
-            20 <span class="text-xs font-normal text-gray-400">/ 20</span>
-          </p>
-        </div>
+<!--compteur des tickets et sièges-->
+<div class="flex flex-col gap-2 px-3 sm:px-4 lg:flex-row">
+  <main class="w-full min-w-0 p-2 lg:w-[60%]">
+    <div class=" rounded-xl border  border-slate-400 p-2 shadow-sm">
+    <div class="grid grid-cols-2 gap-5 px-4">
+      <div class="flex items-center gap-2 border-r border-gray-200 pr-4 sm:gap-3 sm:pr-3">
+       <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-green-100 text-xl text-slate-800">
+        <ion-icon name="ticket-outline"></ion-icon>
+       </div> 
+       <div>
+        <p class="text-sm text-gray-600">Tickets dosponibles</p>
+        <p class="text-lg font-bold text-slate-800">
+          <span id="places-disponibles">20</span>
+          <span class="text-xs font-normal text-gray-400">/ 20</span>
+        </p>   
+       </div>
       </div>
-      <div class="flex items-center gap-3 pl-1">
-        <div class="w-9 h-9 shrink-0 rounded-lg bg-green-100 text-green-600 flex items-center justify-center text-xl">
-          <ion-icon name="cash-outline"></ion-icon>
-        </div>
-        <div>
-          <p class="text-xs text-gray-500">prix de Ticket</p>
-          <p class="text-lg font-bold text-gray-800">80
-            <span class="text-xs font-normal text-gray-400">DH</span>
-          </p>
-        </div>
+
+     <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-100 text-xl text-slate-800">
+        <ion-icon name="cash-outline"></ion-icon>
       </div>
+      <p class="text-sm text-gray-500">Prix de ticket</p>
+      <p class="text-xl font-bold text-slate-800">80 DH</p>
     </div>
+    </div>
+    <section class="rounded-lg p-3 sm:p-4">
+     <div id="liste-sieges" class="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+      <div  class="flex flex-col items-center gap-1 rounded-xl border border-slate-400 p-1">
+        <span class="text-green-500">01</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">02</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">03</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">04</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">05</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">06</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">07</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">08</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">09</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">10</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">11</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">12</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">13</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">14</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">15</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div><div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">16</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div><div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">17</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div><div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">18</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div><div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">19</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+      <div  class="flex flex-col items-center gap-2 rounded-xl border border-slate-400 p-3">
+        <span class="text-green-500">20</span>
+        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-200 text-slate-800 text-2xl ">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+     </div>
+    </section>
   </div>
+  </main>
+  <!--réserver une place-->
+  <div class="mt-2 w-full lg:w-[40%]">
+   <div class="rounded-xl border border-slate-400 p-2 shadow-sm">
+    <h2 class="text-xl font-bold text-slate-950">
+     -  Reserver une place
+    </h2>
+    <form id="reservation-Form" class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2">
+        <label for="nom" class="font-medium text-slate-700">
+          passager
+        </label>
+        <input type="text" id="nom" placeholder="Entrez le nom du passager" class="w-full rounded-lg border border-slate-300 p-3">
+      </div>
+      <div class="grid grid-cols-[1fr_auto] items-end gap-2">
+       <div class="flex flex-col gap-2">
+        <label for="siege" class="font-medium text-slate-700">
+          Siège sélectionné
+        </label>
 
-  <section class="bg-blue-50 border border-blue-100 rounded-2xl p-4 sm:p-5">
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">01</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
+       <select id="siege" class="w-full rounded-lg border border-slate-300 bg-white p-3">
+        <option value="">choiser un siège</option>
+        <option value="01">Siège 01</option>
+        <option value="02">Siège 02</option>
+        <option value="03">Siège 03</option>
+        <option value="04">Siège 04</option>
+        <option value="05">Siège 05</option>
+        <option value="06">Siège 06</option>
+        <option value="07">Siège 07</option>
+        <option value="08">Siège 08</option>
+        <option value="09">Siège 09</option>
+        <option value="10">Siège 10</option>
+        <option value="11">Siège 11</option>
+        <option value="12">Siège 12</option>
+        <option value="13">Siège 13</option>
+        <option value="14">Siège 14</option>
+        <option value="15">Siège 15</option>
+        <option value="16">Siège 16</option>
+        <option value="17">Siège 17</option>
+        <option value="18">Siège 18</option>
+        <option value="19">Siège 19</option>
+        <option value="20">Siège 20</option>
+      </select>
       </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">02</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
+      <button type="submit" id="btn-conf" class="rounded-lg border border-slate-300 bg-slate-900 p-3 font-semibold text-white hover:bg-slate-800">
+        confirmer la réservation
+      </button>
+      <!--message d'erreur ou succès-->
+      <p id="message" class="hidden rounded-lg p-3 text-sm"></p>
       </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">03</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">04</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">05</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">06</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">07</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">08</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">09</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">10</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">11</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">12</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">13</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">14</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">15</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">16</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">17</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">18</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">19</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl border border-gray-200 p-3 flex flex-col items-center gap-2">
-        <span class="text-1xl text-green-500">20</span>
-        <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-<section class="w-[40%] shrink-0 mt-4">
-  <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-    <h2 class="mb-1 text-lg font-bold text-[#0B1F4B]">Réserver une place</h2>
-    <form id="reservation-Form" class="flex flex-col gap-3">
-      <div>
-        <label for="nom" class="mb-1 block text-sm font-medium text-gray-700">Nom du passager</label>
-        <input type="text" id="nom" name="nom" placeholder="Ex : Khadija kaddi" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
-      </div>
-      <div>
-        <label for="siege" class="mb-1 block text-sm font-medium text-gray-700">Siège sélectionné</label>
-        <select c id="siege" name="siege" class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
-          <option value="">choisez un siège</option>
-          <option value="01">Siège 01</option>
-          <option value="02">Siège 02</option>
-          <option value="03">Siège 03</option>
-          <option value="04">Siège 04</option>
-          <option value="05">Siège 05</option>
-          <option value="06">Siège 06</option>
-          <option value="07">Siège 07</option>
-          <option value="08">Siège 08</option>
-          <option value="09">Siège 09</option>
-          <option value="10">Siège 10</option>
-          <option value="11">Siège 11</option>
-          <option value="12">Siège 12</option>
-          <option value="13">Siège 13</option>
-          <option value="14">Siège 14</option>
-          <option value="15">Siège 15</option>
-          <option value="16">Siège 16</option>
-          <option value="17">Siège 17</option>
-          <option value="18">Siège 18</option>
-          <option value="19">Siège 19</option>
-          <option value="20">Siège 20</option>
+     </form>
+   </div>
+   <!--modification d'une réservation-->
+    <div class="mt-2 w-full rounded-xl border border-slate-400 p-2">
+     <h2 class="text-lg font-bold text-slate-950">
+      - Modifier une réservation
+     </h2>
+     <form id="modification-Form" class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2">
+        <label for="passager-existant" class="font-medium text-slate-700">
+          Passager existants
+        </label>
+        <select id="passager-existant"class="w-full rounded-lg border border-slate-300 bg-white p-3">
+          <option value="">Choisir un passager</option>
+
         </select>
-        <div id="message" class="hidden rounded-lg p-3 text-sm"></div>
       </div>
-      <button type="submit" class="w-full rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700">
-        Confirmer la réservation</button>
+      <div class="flex flex-col gap-2">
+        <label for="nv-nom" class="font-medium text-slate-700">
+          Nom de passager
+        </label>
+        <input type="text" id="nv-nom" placeholder="modifier le nom" class="w-full rounded-lg border border-slate-300 p-2">
+      </div>
+      <div class="grid grid-cols-[1fr_auto] items-end gap-2">
+       <div class="flex flex-col gap-2">
+        <label for="nouveau-siege">
+          Nouveau siège
+        </label>
+        <select id="nouveau-siege" class="w-full rounded-lg border border-slate-300 bg-white p-3">
+          <option value="">les siéges</option>
+        </select>
+      </div>
+      <button type="submit" id="btn-modifier" class="rounded-lg border border-slate-300 bg-slate-950 p-3 font-semibold text-white hover:bg-slate-800">
+        Modifier
+      </button>
+     </div>
+     </form>
+  </div>
+  <!--supprimer une réservation-->
+  <div class="mt-2 rounded-xl border border-slate-400 p-2">
+    <h2 class="text-lg font-bold text-slate-900">
+     -  Supprimer une réservation
+    </h2>
+    <form id="suppression-Form">
+      <div class="grid grid-cols-[1fr_auto] items-end gap-2">
+        <div class="flex flex-col gap-2">
+        <label for="passager-supprimer" class="font-medium text-slate-700">
+          Passager réservé
+        </label>
+        <select id="passager-supprimer" class="w-full rounded-lg border border-slate-300 bg-white p-3">
+          <option value="">Choisir un passager</option>
+        </select>
+      </div>
+       <button type="submit" id="btn-supprimer" class="rounded-lg bg-red-600 p-3 font-semibold text-white hover:bg-red-700">
+        Supprimer
+       </button>
+      </div>
     </form>
   </div>
-  </div>
-</section>
-</body>
-</html>
+</div>
