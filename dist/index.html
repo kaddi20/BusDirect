@@ -81,7 +81,8 @@
         <ion-icon name="cash-outline"></ion-icon>
       </div>
       <p class="text-sm text-gray-500">Prix de ticket</p>
-      <p class="text-xl font-bold text-slate-800">80 DH</p>
+      <span id="prix-ticket" class="text-xl font-bold text-slate-800">80 </span>
+      <span class="text-xs font-normal text-gray-400">DH</span>
     </div>
     </div>
     <section class="rounded-lg p-3 sm:p-4">
@@ -269,7 +270,6 @@
         </label>
         <select id="passager-existant"class="w-full rounded-lg border border-slate-300 bg-white p-3">
           <option value="">Choisir un passager</option>
-
         </select>
       </div>
       <div class="flex flex-col gap-2">
@@ -287,6 +287,7 @@
           <option value="">les siéges</option>
         </select>
       </div>
+      <div id="message-modification" class="hidden rounded-lg p-3 text-sm"></div>
       <button type="submit" id="btn-modifier" class="rounded-lg border border-slate-300 bg-slate-950 p-3 font-semibold text-white hover:bg-slate-800">
         Modifier
       </button>
