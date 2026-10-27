@@ -53,10 +53,15 @@ function validation() {
       return;
     }
   }
+
+
   //ajouter la réservation dans le tableau
   reservations.push({nom: nom,siege: siege});
   afficherPassagers();
   affichePassagerSupprim();
+  compteur();
+
+
 
   let place = places[Number(siege) - 1];
   if (place) {
@@ -101,9 +106,9 @@ nomentrer.addEventListener("input", function (){
 
 //Modification de formulaire
 const modificationForm = document.getElementById("modification-Form");
-const passagerExistant = document.getElementById("passager-existant");
+const passagerExistant = document.getElementById("passager-exist");
 const nouvNom = document.getElementById("nv-nom");
-const nvSiege = document.getElementById("nouveau-siege");
+const nvSiege = document.getElementById("nv-siege");
 const messageModif = document.getElementById("messageModif");
 
 // affichage des passagers existants
@@ -208,8 +213,7 @@ function afficherPlaces() {
       place.append(statut, badge);
     }
   }
-}
-//affiche les sieges 
+} 
 
 
 
@@ -306,6 +310,7 @@ function supprimeReser(){
   afficherPassagers();
   afficherSiegesDisponibles();
   affichePassagerSupprim();
+  compteur();
 
   suppremForm.reset();
   afficherMessage("messageSupp","réservation supprimé avec succés","succes");
@@ -315,6 +320,8 @@ suppremForm.addEventListener("submit",function(e){
   supprimeReser();
 });
 affichePassagerSupprim();
+
+
 
 
 // affichage message d'erreur ou de succes
@@ -333,3 +340,13 @@ function afficherMessage(id,texte,type){
 }
 
 
+// adapter compteur de tickits disponibles et le prix de tickit pour chancher automatiquement aprés chaque réservation ou supprission
+function compteur(){
+
+  let placesDispo =TOTAL_SEATS-reservations.length;
+  let prixTotal= reservations.length * PRIX_TICKET;
+  document.getElementById("places-disponibles").textContent=placesDispo;
+  document.getElementById("prix-ticket").textContent=prixTotal +"DH";
+
+}
+compteur();
