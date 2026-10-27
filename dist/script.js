@@ -1,9 +1,5 @@
 const TOTAL_SEATS = 20;
 const PRIX_TICKET =80;
-const seats =[];
-for(let i=1;i<=TOTAL_SEATS;i++){
-  seats.push(String(i).padStart(2,"0"));
-}
 
 let reservations = [];
 
@@ -60,6 +56,8 @@ function validation() {
   //ajouter la réservation dans le tableau
   reservations.push({nom: nom,siege: siege});
   afficherPassagers();
+  affichePassagerSupprim();
+
   let place = places[Number(siege) - 1];
   if (place) {
     place.classList.remove("border-slate-400", "bg-white");
@@ -147,6 +145,10 @@ function afficherSiegesDisponibles(){
     }
   }
 }
+
+passagerExistant.addEventListener("change",function(){
+  afficherSiegesDisponibles();
+})
 //function d'affichage les places
 function afficherPlaces() {
   for (let i = 0; i < places.length; i++) {
@@ -207,6 +209,7 @@ function afficherPlaces() {
     }
   }
 }
+//affiche les sieges 
 
 
 
@@ -258,6 +261,7 @@ modificationForm.addEventListener("submit", function (e){
  afficherPlaces()
  afficherPassagers();
  afficherSiegesDisponibles();
+ affichePassagerSupprim();
 
  afficherMessage("messageModif","Réservation modifiée avec succès.", "succes");
  modificationForm.reset();
@@ -280,6 +284,7 @@ function affichePassagerSupprim(){
     option.textContent = reservations[i].nom;
     passagerSupprem.appendChild(option);
   }
+  console.log(reservations);
 }
 
 //supprimer une reservation
@@ -296,12 +301,7 @@ function supprimeReser(){
       break
     }
   }
-  if(index === -1){
-    afficherMessage("messageSupp","passager introuvable","erreur");
-    return;
-  }
   reservations.splice(index,1);
-
   afficherPlaces();
   afficherPassagers();
   afficherSiegesDisponibles();
