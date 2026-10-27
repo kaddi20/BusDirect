@@ -1,7 +1,7 @@
 const TOTAL_SEATS = 20;
 const PRIX_TICKET =80;
 
-let reservations = JSON.parse(localStorage.getItem(""));
+const reservations=[];
 
 const formulaire = document.getElementById("reservation-Form");
 const nomentrer = document.getElementById("nom");
